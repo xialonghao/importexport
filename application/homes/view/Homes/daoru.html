@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="do_excelImport" enctype="multipart/form-data" method="post" onsubmit="return check()">
+    <input type="file" name="file">
+    <input type="submit" value="导入"/>
+</form>
+</body>
+<script>
+    'use struct';
+    function check() {
+        let file = document.getElementsByName('file')[0];
+        let extension =  file.value.split('.');
+        if(extension[extension.length-1] == "xlsx" || extension[extension.length-1] == "xls") {
+            return true;
+        } else {
+            alert('这不是excel文件');
+            return false;
+        }
+
+    }
+</script>
+</html>

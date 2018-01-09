@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<style>
+		    @font-face {font-family: "iconfont";  
+      src: url('iconfont.eot?t=1474357075'); /* IE9*/  
+      src: url('iconfont.eot?t=1474357075#iefix') format('embedded-opentype'), /* IE6-IE8 */  
+      url('iconfont.woff?t=1474357075') format('woff'), /* chrome, firefox */  
+      url('iconfont.ttf?t=1474357075') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/  
+      url('iconfont.svg?t=1474357075#iconfont') format('svg'); /* iOS 4.1- */  
+    }  
+      
+    .iconfont {  
+      font-family:"iconfont" !important;  
+      font-size:16px;  
+      font-style:normal;  
+      -webkit-font-smoothing: antialiased;  
+      -webkit-text-stroke-width: 0.2px;  
+      -moz-osx-font-smoothing: grayscale;  
+    }  
+    .icon-close01:before { content: "\e600"; }  
+    .icon-close:before { content: "\e601"; }  
+    .icon-zhengque:before { content: "\e602"; }  
+    .icon-iconfontzhengque:before { content: "\e603"; }  
+    .icon-suo:before { content: "\e604"; }  
+    .icon-shousuo:before { content: "\e605"; }  
+	</style>
+</head>
+<body>
+<input type="button" value="登录" class="login_btn" id="login_btn">
+
+<!--登录页面-->  
+<div class="login_kuang" id="login_kuang">  
+    <h3>登录<span class="login_close" id="login_close"><i class="iconfont"><span style="color: rgb(57, 51, 255); font-family: Monaco; font-size: 11px;">&#xe600;</span></i></span></h3>  
+    <div class="loginContent">  
+        <form action="<%=request.getRequestURI()%>/newLogin" method="post" name="login_form">  
+            <p id="info_error"></p>  
+            <input type="text" placeholder="用户名/邮箱" id="login_user" name="login_user" class="login_user">  
+            <p id="user_error"></p>  
+            <input type="password" placeholder="密码" id="login_pass" name="login_pass" class="login_pass">  
+            <p id="pass_error"></p>  
+            <label for="rementPass"><input type="checkbox" checked id="rementPass" class="rementPass"> 记住密码</label><span class="forgetPass" id="forgetPass">忘记密码</span><br>  
+        </form>  
+        <input type="button" value="登录" class="login_btn" id="login_submit2">  
+    </div>  
+    <p class="login_botP">还没有账号？<a href="page/register.html" id="hurreyUpRge" class="hurreyUpRge">立即注册！</a></p>  
+</div>
+
+<script type="text/javascript">
+
+        //登录按钮  
+    $("#login_btn").click(function(){  
+        $("#info_error").html("");  
+        $("#user_error").html("");  
+        $("#pass_error").html("");  
+        $("#login_kuang").show(1000);  
+    });  
+    $("#login_close").click(function(){  
+        $("#login_kuang").hide(1000);  
+    });  
+
+       
+
+    </script>
+</body>
+</html>
