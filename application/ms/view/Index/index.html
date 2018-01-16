@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <title>JS实现倒计时(天数,时,分,秒)</title>
+
+</head>
+<body onload="changeTime()">
+
+<h2>剩余时间:</h2>
+<div id="timer"></div>
+<form action="{:url('Index/homes')}" method="post">
+    <p>学生姓名：<input type="text" name="username"></p>
+    <p>手机号：<input type="text" name="tel">   </p>
+    <p><input type="submit" value="提交"></p>
+    <p><input type="reset"value="重新填入"></p>
+</form>
+<script type="text/javascript">
+    var $i=10;
+    if($i--){
+
+    }else{
+    function changeTime(){
+    document.getElementById("timer").innerHTML =$i;
+    $i--;
+    setInterval("changeTime()",1000);
+    }
+    }
+    changeTime();
+</script>
+</body>
+</html>

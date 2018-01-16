@@ -15,7 +15,7 @@
 			//request()获取,上传file图片值的服去到数组中
             $file=request()->file('photo');
 			//move()实现图片上传的,upload_path创建文件夹放图片的;
-			$fileinfo=$file->(config('upload_path'));
+			$fileinfo=$file->config('upload_path');
 			//getSavenmae()获取最终路径和名称的;
 			 $date['photo']=$fileinfo->getSavename();
 			 $date['inputtime']=time();

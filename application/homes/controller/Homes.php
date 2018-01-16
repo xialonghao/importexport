@@ -3,6 +3,7 @@ namespace app\homes\controller;
 use think\Controller;
 use think\Loader;
 use think\Db;
+use think\IOFactory;
 class Homes extends Controller{
     public function index()
     {
@@ -63,7 +64,7 @@ class Homes extends Controller{
                 $sheet = $objPHPExcel->getSheet($i)->toArray();
                 unset($sheet[0]);
                 foreach ($sheet as $v) {
-                    $data['id'] = $v[0];
+                    $data['Id'] = $v[0];
                     $data['username'] = $v[1];
                     $data['sex'] = $v[2];
                     $data['idcate'] = $v[3];
@@ -81,7 +82,6 @@ class Homes extends Controller{
         }
 
     }
-
 
 }
 ?>

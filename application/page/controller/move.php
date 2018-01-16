@@ -18,11 +18,11 @@
 			$infoes=$table->insert($date);
 			if($infoes)
 			{
-				return $this->success('Ìí¼Ó³É¹¦');
+				return $this->success('ï¿½ï¿½Ó³É¹ï¿½');
 			}
 			else
 			{
-				return $this->erroir('Ìí¼ÓÊ§°Ü');
+				return $this->erroir('ï¿½ï¿½ï¿½Ê§ï¿½ï¿½');
 			}
 			public function userlist()
 			{
@@ -39,11 +39,11 @@
 				$info=$table->where('Id',$id)->delete();
 				if($info)
 				{
-					return $this->success('É¾³ý³É¹¦');;
+					return $this->success('É¾ï¿½ï¿½ï¿½É¹ï¿½');;
 				}
 				else
 				{
-					return $this->error('É¾³ýÊ§°Ü');
+					return $this->error('É¾ï¿½ï¿½Ê§ï¿½ï¿½');
 				}
 				
 			}
@@ -69,11 +69,11 @@
 				$infos=$table->where('Id=',$id)-update($Id);
 				if($infos)
 				{
-					return $this->success('ÐÞ¸Ä³É¹¦');
+					return $this->success('ï¿½Þ¸Ä³É¹ï¿½');
 				}
 				elseP
 				{
-					 return $this->error('ÐÞ¸Ä³É¹¦');
+					 return $this->error('ï¿½Þ¸Ä³É¹ï¿½');
 				}
 				
 			}
